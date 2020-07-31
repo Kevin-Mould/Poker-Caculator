@@ -17,6 +17,6 @@ Pot Odds = 20%
 Your chance to win is greater than the pot odds, you CALL this bet everytime.
 
 ## Remember
-Poker is not based on pure luck, it is a game of probabilities, there are a certain number of cards in the deck and a certain probability that outcomes will occur. So we can use this in our decision making process.
+Poker is not based on pure luck, it is a game of probabilities, there are a certain number of cards in the deck and a certain probability that outcomes will occur. We should use this in our decision making process.
 
 Every time we make a decision in Poker it is a mathematical gamble, what we have to make sure is that we only take the gamble when the odds are on in our favour. As long as we do this, in the long term we will always come out on top.
