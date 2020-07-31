@@ -1,5 +1,5 @@
-## Poker-Caculator.java
-## What problem does this program solve?
+# Poker-Caculator.java
+# What problem does this program solve?
 
 Picture this, you're playing a friendly poker home game with your friends and hold 2 pocket clubs. On the flop, 2 additional clubs are dealt and your heart starts pumping, your chasing a flush draw! However, your opponent is not going to let you see cards for free, and bets $5 making the total pot worth $20 dollars. The decision is yours, do you call?
 
