@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class PokerCaculator
 {
@@ -12,6 +12,8 @@ public class PokerCaculator
    private static double betSize;
    private static double potOdds;
    private static double chanceToWinHand;
+   private static int option;
+
 
    // constructor
    public PokerCaculator(double outs, double potSize, double betSize, String bettingRound)
@@ -21,54 +23,92 @@ public class PokerCaculator
       this.betSize = betSize;
       this.bettingRound = bettingRound;
    }
+  
    
-   // gather information method
-   // TODO
-   // implement exception handling
-   private static void gatherInformation()
+   // gather information method with input validation
+   private static void gatherInformation() throws InputMismatchException
    {
-      System.out.print("First, how many outs do you have? ");
-      outs = scnr.nextDouble();
-      System.out.print("Second, what is the pot size? ");
-      potSize = scnr.nextDouble();
-      System.out.print("Thrid, what is the size of the bet you must call? ");
-      betSize = scnr.nextDouble();
-      System.out.print("Lastly, what betting round are you on [flop or turn]?");
-      bettingRound = scnr.next();
-      PokerCaculator pokerBrain = new PokerCaculator(outs, potSize, betSize, bettingRound);
-   }
-   
-   // caculate methods
-   // TODO
-   // remove exception handling here. Exception handle at user input.
-   // change output to percentage
-   private static double caculateChanceToWinHand(double outs, String bettingRound) throws Exception
-   {
-      try
+      option = 1;
+      while (true)
       {
-         if (getBettingRound().equals("flop"))
-         {
-            chanceToWinHand = (outs * 4);
+         try
+          {
+            if (option == 1)
+            {
+               System.out.print("First, how many outs do you have? ");
+               outs = scnr.nextDouble();
+               if (outs < 0.0)
+               {
+                  System.out.println("Error, you can't have negative outs. Outs > 0.");
+                  option = 1;
+                  continue;
+               }
+               option++;
+            }
+            if (option == 2)
+            {
+               System.out.print("Second, what is the pot size? ");
+               potSize = scnr.nextDouble();
+               if (potSize <= 0)
+               {
+                  System.out.println("Error, pot size can't be less than or equal to 0.");
+                  option = 2;
+                  continue;
+               }
+               option++;
+            }
+            if (option == 3)
+            {
+               System.out.print("Thrid, what is the size of the bet you must call? ");
+               betSize = scnr.nextDouble();
+               if (betSize <= 0)
+               {
+                  System.out.println("Error, bet size can't be less than or equal to 0.");
+                  option = 3;
+                  continue;
+               }
+               option++;
+            }
+            if (option == 4)
+            {
+               System.out.print("Lastly, what betting round are you on [flop or turn]? ");
+               bettingRound = scnr.next();
+               setBettingRound(bettingRound);
+               if (getBettingRound().equals("flop") ^ getBettingRound().equals("turn"))
+               {
+                  PokerCaculator pokerBrain = new PokerCaculator(outs, potSize, betSize, bettingRound);
+                  break;
+               }
+               System.out.println("Error, betting round not flop or turn.");
+               option = 4;
+               continue;
+            }
          }
-         else if (getBettingRound().equals("turn"))
+         catch (InputMismatchException e)
          {
-            chanceToWinHand = (outs * 2);
-         }
-         else
-         {
-            throw new Exception();
+            System.out.println("Error, make sure you are entering the correct input type (number or letter)");
+            scnr.next();
+            continue;
          }
       }
-      catch (Exception e)
+   }
+   
+   
+   // caculate methods
+   private static double caculateChanceToWinHand(double outs, String bettingRound)
+   {
+      if (getBettingRound().equals("flop"))
       {
-         System.out.println("Error, not flop or turn.");
+         chanceToWinHand = (outs * 4);
+      }
+      else if (getBettingRound().equals("turn"))
+      {
+         chanceToWinHand = (outs * 2);
       }
       return chanceToWinHand;
    }
    
    
-   // TODO
-   // change output to percentage
    private static double caculatePotOdds(double potSize, double betSize)
    {
       return 100 / (potSize / betSize + 1);
@@ -118,8 +158,9 @@ public class PokerCaculator
    
    // main method
    // TODO
-   // add loop
-   public static void main(String[] args) throws Exception
+   // add replay game loop
+   // track hand number (hand #1, hand #2, etc)
+   public static void main(String[] args) throws InputMismatchException
    {  
       System.out.println("This Texas Hold'em poker caculator tells you if it is profitable to call a bet.");
       System.out.println("Pot odds determine your breakeven point. How many times you can miss a poker \"out\" and still remain profitable.");
@@ -127,7 +168,16 @@ public class PokerCaculator
       System.out.println("Common outs for flush draw = 9. Open ended straight = 8. Top pair = 3.");
       
       gatherInformation();
-      System.out.println(caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()));
-      System.out.println(caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()));
+      
+      System.out.println("Chance to win hand = " + caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) + "%");
+      System.out.println("Pot odds = " + caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()) + "%");
+      if (caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) >= caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()))
+      {
+         System.out.println("Call");
+      }
+      else
+      {
+         System.out.println("Fold");
+      }
    }
 }
