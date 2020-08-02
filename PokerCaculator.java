@@ -13,6 +13,7 @@ public class PokerCaculator
    private static double potOdds;
    private static double chanceToWinHand;
    private static int option;
+   private static boolean exit = false;
 
 
    // constructor
@@ -167,17 +168,20 @@ public class PokerCaculator
       System.out.println("A poker \"out\" is an unseen card that if delt, will give you the winning hand");
       System.out.println("Common outs for flush draw = 9. Open ended straight = 8. Top pair = 3.");
       
-      gatherInformation();
-      
-      System.out.println("Chance to win hand = " + caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) + "%");
-      System.out.println("Pot odds = " + caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()) + "%");
-      if (caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) >= caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()))
+      while (true)
       {
-         System.out.println("Call");
-      }
-      else
-      {
-         System.out.println("Fold");
+         gatherInformation();
+         
+         System.out.println("Chance to win hand = " + caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) + "%");
+         System.out.println("Pot odds = " + caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()) + "%");
+         if (caculateChanceToWinHand(pokerBrain.getOuts(), pokerBrain.getBettingRound()) >= caculatePotOdds(pokerBrain.getPotSize(), pokerBrain.getBetSize()))
+         {
+            System.out.println("Call");
+         }
+         else
+         {
+            System.out.println("Fold");
+         }
       }
    }
 }
