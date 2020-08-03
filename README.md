@@ -22,6 +22,6 @@ Since your chance to win is greater than the pot odds, you CALL.
 If your chance to win is less than the pot odds, you FOLD.
 
 ## Remember
-Poker is not based on pure luck, it is a game of probabilities, there are a certain number of cards in the deck and a certain probability that outcomes will occur. We should use this in our decision making process.
+"Poker is not based on pure luck, it is a game of probabilities, there are a certain number of cards in the deck and a certain probability that outcomes will occur. We should use this in our decision making process.
 
-Every decision in Poker is a mathematical gamble, we have to make sure that we only take the gamble when the odds are on in our favour. As long as we do this, in the long term we will always come out on top.
+Every decision in Poker is a mathematical gamble, we have to make sure that we only take the gamble when the odds are on in our favour. As long as we do this, in the long term we will always come out on top" (Source and inspiration: http://www.pokerprofessor.com/university/how-to-win-at-poker/poker-math).
