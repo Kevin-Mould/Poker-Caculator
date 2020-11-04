@@ -1,7 +1,7 @@
 # PokerCalculator.java
 ## What problem does this program solve?
 
-Picture this, you're playing a poker hand with your friends and are delt 2 pocket clubs. On the flop, 2 additional clubs are dealt and your heart starts pumping, your chasing a flush draw! However, your opponent, the villain is not going to let you see cards for free, and bets $5 dollars to make the total pot $20 dollars. The decision is yours, do you fold, call or raise?
+Picture this, you're playing a poker hand with your friends and are dealt 2 pocket clubs. The flop contains 2 additional clubs and your heart starts pumping, your chasing a flush draw! However, your opponent called the villain, is not going to let you see cards for free, and bets $5 dollars to make the total pot $20 dollars. The decision is yours, do you fold, call or raise?
 
 ## How fish process this decision. 
 I just need 1 more card to hit my draw. This seems like a good value proposition, I'll call and see another card because I'm feeling lucky!
