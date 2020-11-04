@@ -30,7 +30,7 @@ Poker is complex and decisions are not black and white. Strictly speaking, calli
 
 Every street, you face 3 options - fold, check/call or raise. The more options you consider, the greater chance to make a mistake. You should limit the number of choices. Take the above example, you have correct pot odds to call 36% to 20%, the fold option is a mistake and the raise option is not optimal. Why raise yourself out of profitable decision? Just call.
 
-Take the opposite example, say you have incorrect pot odds, 22% chance to win with 28% pot odds. The fold option is correct to protect your chip stack from -EV plays. The call option is a mistake. However, the raise option is an acceptable play in certain scenarios. This is a semi-bluff that combines the poker concepts highlighted above with your chance to win hand to estimate a +EV play (and disguise your hand range) even in the face of incorrect pod odds. In summary, never call incorrect pot odds, fold or raise are your only 2 options.
+Take the opposite example, say you have incorrect pot odds, 22% chance to win with 28% pot odds. The fold option is correct to protect your chip stack from -EV plays. The call option is a mistake. However, the raise option is an acceptable play in certain scenarios. This is a semi-bluff that combines the poker concepts highlighted above with your chance to win hand to estimate a +EV play (and disguise your hand range) even in the face of incorrect pot odds. In summary, never call incorrect pot odds, fold or raise are your only 2 options.
 
 ## Tips
 A good default option when being the first to act out of position (OOP) is to just check your entire range. 
