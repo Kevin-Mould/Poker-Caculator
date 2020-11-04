@@ -7,7 +7,7 @@ Picture this, you're playing a poker hand with your friends and are dealt 2 pock
 I just need 1 more card to hit my draw. This seems like a good value proposition, I'll call and see another card because I'm feeling lucky!
 
 ## How sharks (and PokerCalculator.java) process this decision. 
-First, identify your outs to caclculate the chance to win. Formula: Chance to win(flop) = 4(outs). Chance to win(turn) = 2(outs).
+First, identify your outs to calculate the chance to win. Formula: Chance to win(flop) = 4(outs). Chance to win(turn) = 2(outs).
 
 A flush draw means you have 9 outs (13 clubs - 4 displayed clubs). on the flop you multiple your outs by 4 so the chance to hit a club is 9 * 4 = 36%.
 
