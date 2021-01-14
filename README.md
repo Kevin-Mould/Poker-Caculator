@@ -41,7 +41,7 @@ A good default option when being the first to act out of position (OOP) is to ju
 
 Being aggressive in poker (raising) is never the wrong play, but might be sub-optimal compared to other options.
 
-This software complies with Pokerstars' permitted tools and services guidelines available at https://www.pokerstarsnj.com/poker/room/prohibited/
+This software should comply with rule 1 of Pokerstars' permitted tools and services guidelines available at https://www.pokerstarsnj.com/poker/room/prohibited/
 
 ![](Pictures/AcceptableSoftware.PNG)
 
