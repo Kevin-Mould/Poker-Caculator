@@ -106,7 +106,14 @@ public class PokerCalculator
    {
       if (getBettingRound().equals("flop"))
       {
-         chanceToWinHand = (outs * 4);
+         if (outs >= 8.0) // more percise equity number for large number of outs
+         {
+            chanceToWinHand = (outs * 4) - (outs - 8);
+         }
+         else
+         {
+            chanceToWinHand = (outs * 4);
+         }
       }
       else if (getBettingRound().equals("turn"))
       {
@@ -164,9 +171,6 @@ public class PokerCalculator
    }
    
    // main method
-   // TODO
-   // add replay game loop
-   // track hand number (hand #1, hand #2, etc)
    public static void main(String[] args) throws InputMismatchException
    {  
       System.out.println("This Texas Hold'em poker calculator tells you if it is profitable to call a bet.");
