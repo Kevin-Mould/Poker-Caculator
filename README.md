@@ -25,6 +25,10 @@ Since your chance to win is greater than the pot odds, you CALL.
 
 If your chance to win is less than the pot odds, you FOLD or raise.
 
+![](Pictures/ProductDemo1.PNG)
+
+![](Pictures/ProductDemo2.PNG)
+
 ## 10,000 Foot Overview
 Poker is complex and decisions are not black and white. Strictly speaking, calling the flop at 4(outs) odds and folding every time you miss the out on the turn is negative expected value (-EV). However, it is important to remember that you can still win the pot EVEN if you miss your out. Poker strategy concepts such as fold equity, implied odds, hand ranges and the tendencies of the villain are impossible to quantify, but positively contribute to your EV. This is why the formula encourages taking more risk on the flop compared to the turn.
 
@@ -36,5 +40,9 @@ Take the opposite example, say you have incorrect pot odds, 22% chance to win wi
 A good default option when being the first to act out of position (OOP) is to just check your entire range. 
 
 Being aggressive in poker (raising) is never the wrong play, but might be sub-optimal compared to other options.
+
+This software complies with Pokerstars' permitted tools and services guidelines available at https://www.pokerstarsnj.com/poker/room/prohibited/
+
+![](Pictures/AcceptableSoftware.PNG)
 
 Project inspired by: http://www.pokerprofessor.com/university/how-to-win-at-poker/poker-math
