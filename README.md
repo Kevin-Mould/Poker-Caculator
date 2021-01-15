@@ -40,8 +40,6 @@ Take the opposite example, say you have incorrect pot odds, 22% chance to win wi
 ## Misc
 1/14/2021 Update: calculateChanceToWinHand method changed when outs >= 8 to more precisely calculate the chance to improve your hand when you have many outs.
 
-This software should comply with rule 1 of Pokerstars' permitted tools and services guidelines available at https://www.pokerstarsnj.com/poker/room/prohibited/
-
-![](Pictures/AcceptableSoftware.PNG)
+This software requires the player to use their skill and experience to recognize how many outs will improve their hand. Additionally, this software makes use of game state information that is openly available to everyone at the table such as pot size, betting information and current street. This software takes no action by itself and requires the player to make the final decision to fold, call, raise and determine an appropriate bet sizing. Before using this software, one should consult the rules and regulations of their cardroom to determine if the spirit of this software falls under the cardroom's permitted tools and services guidelines.
 
 Project inspired by: http://www.pokerprofessor.com/university/how-to-win-at-poker/poker-math
